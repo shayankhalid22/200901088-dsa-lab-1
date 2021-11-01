@@ -1,0 +1,11 @@
+string=input("Enter a string")
+string2=''
+stack1=[]
+for i in string:
+stack1.append(i)
+while len(stack1)!=0:
+string2=string2+stack1.pop()
+if(string2==string):
+print("The entered string is palendrom")
+else:
+print("The entered string is not a palendrom")
