@@ -1,0 +1,29 @@
+class node:
+  def _init_(self,data=None):
+    self.data= data
+    self.next=None
+    
+class linkedlist:
+  def _init_(self):
+    self.head=node()   
+  def append(self,data):
+      new_node=node(data)
+      curr=self.head  #temporary variable 
+      while curr.next!=None:
+        curr=curr.next
+      curr.next=new_node
+
+  def display(self):
+     curr=self.head
+     dis=[]
+     while curr.next!=None:
+       curr=curr.next
+       dis.append(curr.data)
+       print(dis)
+     
+  def delete(self):
+    curr=self.head
+    while(curr.next.next):
+      #secondlast_node=curr.next
+      curr=curr.next
+    curr.next=None
